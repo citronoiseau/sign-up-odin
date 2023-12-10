@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUBBIX</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,600;1,400&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background-sector">
+      <div class="logo">
+        <img src="../images/icon.svg" alt="controller" class="icon" />
+        <div class="logo-name">HUBBIX</div>
+      </div>
+      <div class="photo-credits">
+        Photo by
+        <a href="https://unsplash.com/@lorenzoherrera">Lorenzo Herrera</a> on
+        <a
+          href="https://unsplash.com/photos/vintage-gray-game-console-and-joystick-p0j-mE6mGo4"
+        >
+          Unsplash</a
+        >
+      </div>
+    </div>
+    <div class="signing-sector">
+      <div class="text-info">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams.
+        </p>
+        <p>Sign up <em> now </em> to get started.</p>
+        <h1>You <em> know </em> what you want to.</h1>
+      </div>
+      <div class="form-container">
+        <h2>Let's do this!</h2>
+        <form id="sign-up-form" action="" method="get">
+          <div class="form-element">
+            <label for="first-name"> Fisrt Name </label>
+            <input
+              id="first-name"
+              name="first-name"
+              type="text"
+              placeholder="John"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="last-name"> Last Name </label>
+            <input
+              id="last-name"
+              name="last-name"
+              type="text"
+              placeholder="Doe"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="email"> Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="joe@example.com"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="tel"> Phone number</label>
+            <input
+              id="tel"
+              name="tel"
+              type="tel"
+              pattern="[0-9+ ]+"
+              placeholder="+7 349 234 334"
+              required
+            />
+          </div>
+          <div class="form-element" id="password-container">
+            <label for="password"> Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              pattern="^(?=.*[A-Z]).{8,}$"
+            />
+
+            <div class="valid-messages">
+              <span class="matching-passwords"> Passwords do not match</span>
+              <span class="password-length"> At least 8 characters</span>
+              <span class="password-upper"> At least 1 uppercase letter</span>
+            </div>
+          </div>
+          <div class="form-element">
+            <label for="confirm-password"> Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <button type="submit" form="sign-up-form" id="submit-btn">
+        Create Account
+      </button>
+      <p>Already have an account? <a href="/">Sign in </a></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

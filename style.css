@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --logo-font: "Rubik Mono One", monospace;
+  --main-font: "Roboto Mono", monospace;
+}
+body {
+  display: flex;
+  font-family: var(--main-font);
+  color: #d8a9fa;
+}
+
+.background-sector {
+  background: rgb(20, 5, 12) url(../images/1.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin-top: 170px;
+  display: flex;
+  align-items: center;
+  background-color: #270b17c7;
+  width: 100%;
+  backdrop-filter: blur(0.3rem);
+  font-family: var(--logo-font);
+  justify-content: center;
+  padding: 35px 10px;
+  gap: 5px;
+}
+.logo-name {
+  font-size: min(4vw, 3.5rem);
+}
+.icon {
+  width: min(6vw, 8vw);
+}
+.photo-credits {
+  background-color: rgba(20, 5, 12, 0.638);
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 10px;
+  font-weight: 300;
+}
+a {
+  transition: all 0.2s;
+  color: #d8a9fa;
+}
+a:hover {
+  color: #7b4b9e;
+}
+
+.signing-sector {
+  background-color: #17060d;
+}
+.text-info {
+  margin-top: 50px;
+  max-width: 63ch;
+  padding-left: 40px;
+}
+h1,
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+h1 {
+  margin: 20px 0px 40px 0px;
+}
+.form-container {
+  width: 100%;
+  background-color: #2e0d1a;
+  padding: 10px 40px;
+  box-shadow: 9px 8px 20px rgba(1, 163, 255, 0.2);
+  border-radius: 5px;
+  min-height: 350px;
+}
+h2 {
+  padding: 10px 0px;
+  color: #e5c0ff;
+}
+.form-element {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+}
+form {
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+form label {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+form input {
+  background-color: #2e0d1a;
+  width: 300px;
+  border: 0;
+  border-bottom: 2px solid #d8a9fa;
+  box-shadow: 0px 17px 16px rgba(216, 169, 250, 0.088);
+  border-radius: 4px;
+  outline: none;
+  padding: 10px;
+  caret-color: #d8a9fa;
+  color: #e8c8ff;
+  font-weight: 300;
+  margin-right: 20px;
+  transition: all 0.2s ease;
+}
+form input:hover,
+form input:focus {
+  box-shadow: 0px 17px 16px rgba(216, 169, 250, 0.17);
+  border-bottom: 2px solid #e5c0ff;
+}
+
+form input[type="text"]:user-invalid,
+form input[type="email"]:user-invalid,
+form input[type="tel"]:user-invalid,
+.user-invalid-password {
+  box-shadow: 0px 17px 16px rgba(150, 7, 48, 0.17);
+  border-bottom: 2px solid #de1147;
+}
+form input[type="text"]:user-valid,
+form input[type="email"]:user-valid,
+form input[type="tel"]:user-valid,
+.user-valid-password {
+  box-shadow: 0px 17px 16px rgba(34, 153, 4, 0.17);
+  border-bottom: 2px solid #05b147;
+}
+
+form input[type="text"]:user-invalid:hover,
+form input[type="email"]:user-invalid:hover,
+form input[type="tel"]:user-invalid:hover,
+.user-invalid-password:hover,
+form input[type="text"]:user-invalid:focus,
+form input[type="email"]:user-invalid:focus,
+form input[type="tel"]:user-invalid:focus,
+.user-invalid-password:focus {
+  box-shadow: 0px 17px 16px rgba(150, 7, 48, 0.286);
+  border-bottom: 2px solid #eb1c53;
+}
+form input[type="text"]:user-valid:hover,
+form input[type="email"]:user-valid:hover,
+form input[type="tel"]:user-valid:hover,
+.user-valid-password:hover,
+form input[type="text"]:user-valid:focus,
+form input[type="email"]:user-valid:focus,
+form input[type="tel"]:user-valid:focus,
+.user-valid-password:focus {
+  box-shadow: 0px 17px 16px rgba(34, 153, 4, 0.227);
+  border-bottom: 2px solid #10ca57;
+}
+
+button {
+  margin: 30px 40px;
+  padding: 15px 40px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #8e0f50;
+  box-shadow: 9px 8px 20px rgba(1, 163, 255, 0.2);
+  color: #c2e1ff;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+  border: none;
+}
+button:hover {
+  box-shadow: 7px 6px 15px rgba(1, 163, 255, 0.3);
+  transform: scale(1.02);
+}
+button:active {
+  transform: scale(0.95);
+  box-shadow: 5px 4px 10px rgba(1, 163, 255, 0.4);
+  background-color: #5581c8;
+}
+.signing-sector button + p {
+  padding: 10px 40px;
+}
+.valid-messages {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.matching-passwords {
+  display: none;
+}
+.error,
+.correct {
+  transition: all 0.3s ease;
+}
+.error {
+  display: block;
+  color: #de1147;
+}
+.correct {
+  color: #10ca57;
+}
+
+@media (max-width: 767px) {
+  body {
+    flex-direction: column;
+  }
+}
